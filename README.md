@@ -1,4 +1,3 @@
-```markdown
 # AuthService
 
 **AuthService** is a simple authentication service built using Clean Architecture principles with .NET 9, providing user registration, login, and JWT-based authentication for web applications.
@@ -41,9 +40,9 @@ Before running the project, ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/aaftab1441/AuthService.git
+git clone https://github.com/yourusername/AuthService.git
 cd AuthService
-```
+
 
 ### 2. Configure the Database
 
@@ -160,9 +159,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Author
 [Aftab Ahmed](https://github.com/aaftab1441)
-
-```
-
-### How to use the README:
-- Replace `https://github.com/aaftab1441/AuthService.git` with the actual GitHub URL of your project.
-- Replace the `supersecretkey12345` in `appsettings.json` with a more secure key.
