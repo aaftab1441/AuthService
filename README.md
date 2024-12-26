@@ -42,24 +42,25 @@ This application demonstrates the ability to use modern development frameworks a
 - Provide a script or documentation to set up and run the application locally using Aspire.
 
 ## Project Structure
-/ProductCatalog
-    /ProductApi
-        Program.cs
-        Startup.cs
-        Endpoints
-        ProductEndpoints.cs
-        Models
-        Product.cs
-    /ProductApp
-        Program.cs
-        Pages
-        ProductPages
-        Edit.razor
-        Delete.razor
-        List.razor
-    /Tests
-        IntegrationTests.cs
-        appsettings.json
+ProductCatalog/
+├── ProductApi/
+│ ├── Program.cs
+│ ├── Startup.cs
+│ ├── Endpoints/
+│ │ └── ProductEndpoints.cs
+│ └── Models/
+│ └── Product.cs
+├── ProductApp/
+│ ├── Program.cs
+│ └── Pages/
+│ └── ProductPages/
+│ ├── Edit.razor
+│ ├── Delete.razor
+│ └── List.razor
+├── Tests/
+│ └── IntegrationTests.cs
+├── appsettings.json
+
 
 
 
