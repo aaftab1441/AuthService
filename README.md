@@ -1,3 +1,113 @@
+# Product Catalog Application
+
+## Objective
+This application demonstrates the ability to use modern development frameworks and tools. It includes a .NET API using FastEndpoints, a PostgreSQL database with Dapper as the ORM, integration tests using TestContainers, and a Blazor application for data interaction.
+
+## Requirements
+
+### API
+- **Endpoints to manage Products**:
+  ```json
+  {
+    "id": 1,
+    "name": "Sample Product",
+    "price": 10.99,
+    "description": "A sample product for testing."
+  }
+  ```
+- **Endpoints**:
+  - `GET /products` - Retrieve all products.
+  - `GET /products/{id}` - Retrieve a single product by ID.
+  - `POST /products` - Create a new product.
+  - `PUT /products/{id}` - Update an existing product.
+  - `DELETE /products/{id}` - Delete a product.
+
+### Database
+- **PostgreSQL** as the database.
+- **Dapper** as the ORM.
+
+### Integration Tests
+- Integration tests for the API using **TestContainers** to spin up a PostgreSQL container during testing.
+
+### Blazor Application
+- A simple Blazor application to display and interact with the product data.
+- **Features**:
+  - A list view to display all products.
+  - A form to create or edit a product (extra credit).
+  - Buttons to delete a product (extra credit).
+
+### Aspire Configuration
+- Use **Aspire** to wire up the API, database, and Blazor application.
+- Include service discovery to allow the Blazor app to interact with the API.
+- Provide a script or documentation to set up and run the application locally using Aspire.
+
+## Project Structure
+/ProductCatalog
+    /ProductApi
+        Program.cs
+        Startup.cs
+        Endpoints
+        ProductEndpoints.cs
+        Models
+        Product.cs
+    /ProductApp
+        Program.cs
+        Pages
+        ProductPages
+        Edit.razor
+        Delete.razor
+        List.razor
+    /Tests
+        IntegrationTests.cs
+        appsettings.json
+
+
+
+## Implementation Summary
+- **API**: Built using FastEndpoints to handle CRUD operations for products.
+- **Database**: Integrated PostgreSQL with Dapper for data access.
+- **Blazor Application**: Created a Blazor application to interact with the API, allowing users to view, create, update, and delete products.
+- **Integration Tests**: Implemented tests using TestContainers to ensure the API functions correctly with a PostgreSQL database.
+- **Aspire**: Used Aspire for service discovery and wiring up the API and Blazor application.
+
+## Setup Instructions
+
+### Prerequisites
+- .NET SDK installed
+- PostgreSQL installed and running
+- Aspire installed
+
+### Configuration
+1. **Database Connection**:
+   - Update the `appsettings.json` in the `ProductApi` project with your PostgreSQL connection string:
+   ```json
+   {
+     "ConnectionStrings": {
+       "DefaultConnection": "Host=localhost;Port=5432;Database=your_database;Username=your_username;Password=your_password"
+     }
+   }
+   ```
+
+2. **Aspire Configuration**:
+   - Ensure that Aspire is configured in both the API and Blazor projects to handle service discovery.
+
+### Running the Application
+1. **Set the Startup Project**:
+   - Set `ProductCatalog.AppHost` as the startup project in your IDE.
+
+2. **Run the Application**:
+   - The application will automatically handle running both the API and Blazor application.
+
+3. **Access the Application**:
+   - Open your browser and navigate to `https://localhost:5001` for the Blazor application and `https://localhost:7031` for the API.
+
+### Integration Tests
+- To run the integration tests, navigate to the `ProductApi.Tests` directory and run:
+```
+dotnet test
+```
+
+
 # AuthService
 
 **AuthService** is a simple authentication service built using Clean Architecture principles with .NET 9, providing user registration, login, and JWT-based authentication for web applications.
