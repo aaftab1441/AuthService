@@ -43,23 +43,23 @@ This application demonstrates the ability to use modern development frameworks a
 
 ## Project Structure
 ProductCatalog/
-├── ProductApi/
-│ ├── Program.cs
-│ ├── Startup.cs
-│ ├── Endpoints/
-│ │ └── ProductEndpoints.cs
-│ └── Models/
-│ └── Product.cs
-├── ProductApp/
-│ ├── Program.cs
-│ └── Pages/
-│ └── ProductPages/
-│ ├── Edit.razor
-│ ├── Delete.razor
-│ └── List.razor
-├── Tests/
-│ └── IntegrationTests.cs
-├── appsettings.json
+- ├── ProductApi/
+- │ ├── Program.cs
+- │ ├── Startup.cs
+- │ ├── Endpoints/
+- │ │ └── ProductEndpoints.cs
+- │ └── Models/
+- │ └── Product.cs
+- ├── ProductApp/
+- │ ├── Program.cs
+- │ └── Pages/
+- │ └── ProductPages/
+- │ ├── Edit.razor
+- │ ├── Delete.razor
+- │ └── List.razor
+- ├── Tests/
+- │ └── IntegrationTests.cs
+- ├── appsettings.json
 
 
 
